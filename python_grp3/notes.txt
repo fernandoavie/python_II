@@ -1,0 +1,55 @@
+__Notes__
+
+* Dealing with Outliers
+* Rush_hour variable
+* high_season vs low_season
+* log on bike rental? as very skewed?
+* Plot relationships box and avg
+
+
+-------
+__Further Notes for modeling__
+* Why not using facebook prophet for forcasting with time series?
+* Train_Test split --> split maybe like time series! --> for better results
+
+-------
+__Fruther Notes for Streamlite__
+* Add an open ai chatbot?
+
+
+------ Feature Engineering -----
+
+Rush hours
+
+Temperature Difference
+
+Comfort Index
+
+Daypart
+
+Temperature Range
+
+log on bike rents?
+
+Lag variable: count of bike rentals from the previous hour might be a useful feature.
+
+Rolling Window: Rolling mean
+
+
+---------------------------------
+
+"Feels Like" Temperature: Combine temp_celsius, humidity, and windspeed to create a "feels_like" temperature variable that could be more correlated with bike rental counts.
+
+Time Categories: Break the 'hour' variable into categorical bins such as 'morning', 'afternoon', 'evening', and 'night' to capture different daily time periods that could affect rental patterns.
+
+Weather Scores: Create a composite weather score based on weather_condition, temp_celsius, humidity, and windspeed to quantify the overall weather condition.
+
+Holiday Weekday Interaction: Combine is_holiday and weekday into an interaction feature to capture unique effects of holidays falling on specific weekdays.
+
+Season-Year Interaction: An interaction term between season and year could capture the change in seasonal patterns over the years.
+
+User Type Ratios: Calculate the ratio of casual_user_ct to registered_user_ct to see how the mix of user types affects total rentals.
+
+Rolling Averages: Use rolling averages of total_bike_ct to smooth out day-to-day fluctuations and identify longer-term trends.
+
+Lagged Demand: Create lagged features of total_bike_ct (like rentals from the previous hour/day) to incorporate information about past demand into the model.
